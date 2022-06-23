@@ -7,43 +7,41 @@ import { Texture } from 'three'
  * Textures
  */
 const loadingManager = new THREE.LoadingManager()
-loadingManager.onStart = () => 
-{
+// loadingManager.onStart = () => 
+// {
 
-    console.log('loading started')
+//     console.log('loading started')
 
-}
+// }
 
-loadingManager.onLoad = () => 
-{
+// loadingManager.onLoad = () => 
+// {
 
-    console.log('loading finished')
+//     console.log('loading finished')
 
-}
+// }
 
-loadingManager.onProgress = () => 
-{
+// loadingManager.onProgress = () => 
+// {
     
-    console.log('loading progressing')
+//     console.log('loading progressing')
 
-}
+// }
 
-loadingManager.onError = () => 
-{
+// loadingManager.onError = () => 
+// {
 
-    console.log('loading error')
+//     console.log('loading error')
 
-}
+// }
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
 const colorTexture = textureLoader.load('/textures/door/color.jpg')
-const alphaTexture = textureLoader.load('/textures/door/alpha.jpg')
-const heightTexture = textureLoader.load('/textures/door/height.jpg')
-const normalTexture = textureLoader.load('/textures/door/normal.jpg')
-const ambientOcclusionTexture = textureLoader.load('/textures/door/ambientOcclusion.jpg')
-const metalnessTexture = textureLoader.load('/textures/door/metalness.jpg')
-const roughnessTexture = textureLoader.load('/textures/door/roughness.jpg')
 
+colorTexture.rotation = Math.PI * 0.25
+
+colorTexture.center.x = 0.5
+colorTexture.center.y = 0.5
 
 /**
  * Base
