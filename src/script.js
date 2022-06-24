@@ -36,13 +36,14 @@ const loadingManager = new THREE.LoadingManager()
 // }
 
 const textureLoader = new THREE.TextureLoader(loadingManager)
-const colorTexture = textureLoader.load('/textures/door/color.jpg')
+const colorTexture = textureLoader.load('/textures/minecraft.png')
 
 colorTexture.rotation = Math.PI * 0.25
 
 colorTexture.center.x = 0.5
 colorTexture.center.y = 0.5
-
+colorTexture.generateMipmaps = false
+colorTexture.magFilter = THREE.NearestFilter
 /**
  * Base
  */
